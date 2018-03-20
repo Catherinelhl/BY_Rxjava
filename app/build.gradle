@@ -24,6 +24,11 @@ android {
         exclude 'META-INF/rxjava.properties'
     }
 }
+kotlin {
+    experimental {
+        coroutines 'enable'
+    }
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -37,6 +42,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:adapter-rxjava:' + retrofit2
     implementation 'com.squareup.retrofit2:converter-gson:' + retrofit2
     implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:' + retrofitAdapter
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.20"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.20"
 
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
