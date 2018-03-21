@@ -2,6 +2,7 @@ package cn.catherine.by_rxjava.ui.aty
 
 import android.os.Bundle
 import cn.catherine.by_rxjava.R
+import cn.catherine.by_rxjava.aspect.annotations.DebugLog
 import cn.catherine.by_rxjava.common.BaseAty
 import kotlinx.android.synthetic.main.aty_aspect.*
 
@@ -19,6 +20,13 @@ class AspectAty : BaseAty() {
     }
 
     override fun setListener() {
-        btn_aspect.setOnClickListener { println("this is a test.") }
+        btn_aspect.setOnClickListener {
+            printArgs()
+        }
+    }
+
+    @DebugLog
+    private fun printArgs() {
+        println("this is a test.debuglog over")
     }
 }
