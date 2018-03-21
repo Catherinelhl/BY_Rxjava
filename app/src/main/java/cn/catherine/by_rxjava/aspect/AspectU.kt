@@ -22,7 +22,7 @@ public void onActivityMethodBefore：实际切入的代码。
 class AspectU {
     private val TAG = "aspect log-"
 
-    @Before("execution(* cn.catherine.by_rxjava.ui.aty.AspectAty.initViews(..))")
+    @Before("execution(* cn.catherine.by_rxjava.ui.aty.AspectAty.**(..))")
     fun onActivityMethodBefore(joinPoint: JoinPoint) {
         try {
             val key = joinPoint.signature.toString()
