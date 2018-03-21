@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'com.archinamon.aspectj'
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -44,7 +44,7 @@ dependencies {
     implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:' + retrofitAdapter
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.20"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.20"
-
+    implementation "org.jetbrains.anko:anko:$anko_version"
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
