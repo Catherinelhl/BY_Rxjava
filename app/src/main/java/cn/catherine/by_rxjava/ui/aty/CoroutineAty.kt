@@ -12,9 +12,11 @@ import rx.Observable
 /**
  * Created by catherine on 2018/3/18.
  */
-const val LOGO_URL = "http://www.imooc.com/static/img/index/logo.png?t=1.1"
 
 class CoroutineAty : BaseAty() {
+    //    const val LOGO_URL = "http://www.imooc.com/static/img/index/logo.png?t=1.1"
+    val LOGO_URL = "http://www.imooc.com/static/img/index/logo.png?t=1.1"
+
     override fun getArgs(bundle: Bundle?) {
     }
 
