@@ -1,12 +1,11 @@
 package cn.catherine.by_rxjava.ui.aty
 
 import android.os.Bundle
-import android.os.Message
 import cn.catherine.by_rxjava.R
+import cn.catherine.by_rxjava.aspect.annotations.ClickEvent
 import cn.catherine.by_rxjava.aspect.annotations.DebugLog
 import cn.catherine.by_rxjava.common.BaseAty
 import cn.catherine.by_rxjava.tools.L
-import cn.catherine.by_rxjava.tools.print
 import kotlinx.android.synthetic.main.aty_aspect.*
 
 /**
@@ -32,9 +31,11 @@ class AspectAty : BaseAty() {
         }
     }
 
-    @DebugLog
+    //    @DebugLog
+//    @ClickEvent
     private fun printArgs() {
-        L.i("debuglog noparameters")
+        btnClickAfter()
+        L.i("ClickEvent noparameters")
     }
 
     @DebugLog
@@ -50,6 +51,10 @@ class AspectAty : BaseAty() {
     @DebugLog
     private fun printArgs(code: Int, parameters: String, message: String) {
         L.i("debuglog parameter 3")
+    }
+
+    private fun btnClickAfter() {
+        L.i("btnClickAfter")
     }
 
 }
