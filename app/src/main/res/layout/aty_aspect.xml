@@ -11,5 +11,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="dot me to test aspect" />
-
+    <Button
+        android:id="@+id/btn_aspect2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="dot me to test aspect2" />
 </LinearLayout>

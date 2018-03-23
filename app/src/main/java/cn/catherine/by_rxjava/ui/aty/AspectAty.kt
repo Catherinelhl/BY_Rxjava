@@ -2,7 +2,6 @@ package cn.catherine.by_rxjava.ui.aty
 
 import android.os.Bundle
 import cn.catherine.by_rxjava.R
-import cn.catherine.by_rxjava.aspect.annotations.ClickEvent
 import cn.catherine.by_rxjava.aspect.annotations.DebugLog
 import cn.catherine.by_rxjava.common.BaseAty
 import cn.catherine.by_rxjava.tools.L
@@ -24,10 +23,15 @@ class AspectAty : BaseAty() {
     override fun setListener() {
         btn_aspect.setOnClickListener {
             //            this.print(suffix = "dot to btn_aspect")
-            printArgs()
-//            printArgs("")
+
+//           printArgs()
 //            printArgs("", 1)
 //            printArgs(1, "", "")
+        }
+        btn_aspect2.setOnClickListener {
+            val para = printArgs("Catherine")
+            L.i("切入点的返回值是：$para")
+
         }
     }
 
@@ -39,8 +43,9 @@ class AspectAty : BaseAty() {
     }
 
     @DebugLog
-    private fun printArgs(parameters: String) {
+    private fun printArgs(parameters: String):String {
         L.i("debuglog parameter 1")
+        return "Catherine is a lady!"
     }
 
     @DebugLog
