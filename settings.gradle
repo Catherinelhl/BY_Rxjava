@@ -1,1 +1,1 @@
-include ':app', ':aspectB'
+include ':app', ':aspectB', ':TestKtDataClass'
