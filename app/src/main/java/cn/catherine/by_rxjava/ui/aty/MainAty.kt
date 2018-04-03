@@ -16,6 +16,7 @@ class MainAty : BaseAty() {
     override fun setView(): Int = R.layout.aty_main
 
     override fun initViews() {
+
     }
 
     override fun setListener() {

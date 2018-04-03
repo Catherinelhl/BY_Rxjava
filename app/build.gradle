@@ -1,7 +1,17 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-noarg'
+apply plugin: 'kotlin-allopen'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.archinamon.aspectj'
+
+noArg{
+    annotation("cn.catherine.by_rxjava.model.PoKo")
+}
+allOpen{
+    annotation("cn.catherine.by_rxjava.model.PoKo")
+
+}
 android {
     compileSdkVersion 26
     defaultConfig {
